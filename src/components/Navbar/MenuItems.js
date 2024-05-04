@@ -1,16 +1,25 @@
-import React from 'react';
-import Button from '../Buttons';
+// This file should be moved to assets if it won't be a component
 
-function MenuItems() {
-  return (
-    <div id='items-container' className='justify-self-end mr-12 flex items-center justify-center font-bold'>
-      <a id='button-1' className='mx-3' href='#1'>Home</a>
-      <a id='button-2' className='mx-3' href='#1'>Services</a>
-      <a id='button-3' className='mx-3' href='#1'>Products</a>
-      <a id='button-4' className='mx-3' href='#1'>Contact Us</a>
-      <Button />
-    </div>
-  );
-}
-
-export default MenuItems;
+export const menuItems = [
+  {
+    title: 'Home',
+    url: '#',
+  },
+  {
+    title: 'Services',
+    url: '#',
+  },
+  {
+    title: 'Products',
+    url: '#',
+  },
+  {
+    title: 'Contact Us',
+    url: '#',
+  },
+  // For mobile pop-out: replacing the button for the mobile side
+  {
+    title: 'Sign up',
+    url: '#',
+  },
+];

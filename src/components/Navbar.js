@@ -27,7 +27,7 @@ function Navbar() {
           <img src={reactIcon} alt='reactJs-icon' className='w-6 h-6' />
         </div>
         <div id='rightSide-container'>
-          <div id='mobile-icons'>
+          <div id='mobile-icons' className='sm:hidden'>
             <button onClick={handleIconClick}>
               {isClicked ? (
                 <FontAwesomeIcon
@@ -46,7 +46,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <ul className={` ${isClicked ? 'flex flex-col items-center justify-center bg-indigo-600' : 'hidden'}`}>
+      <ul className={` ${isClicked ? 'flex flex-col items-center justify-center bg-indigo-600' : 'hidden'} sm:flex sm:justify-between`}>
         {menuItems.map((item, index) => {
           return (
             <li key={index} className='my-3'>

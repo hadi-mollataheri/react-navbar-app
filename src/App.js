@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 
-// This file should be moved to assets if it won't be a component
-
 export const menuItems = [
   {
     title: 'Home',
@@ -33,6 +31,7 @@ function App() {
   return (
     <div id='container'>
       <header>
+        <Navbar />
       </header>
     </div>
   );

@@ -2,9 +2,9 @@ import React from 'react';
 
 function Button() {
   return (
-    <>
-      <button className=' bg-blue-400 rounded-md px-4 py-1 ml-3'>sign up</button>
-    </>
+    <button className=' bg-cyan-400 rounded-md py-1 px-3 leading-tight my-4 align-middle'>
+      sign up
+    </button>
   );
 }
 

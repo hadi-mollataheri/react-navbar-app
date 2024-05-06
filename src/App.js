@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 import Navbar from './components/Navbar';
 
 export const menuItems = [
@@ -18,24 +18,20 @@ export const menuItems = [
     title: 'Contact Us',
     url: '#',
   },
-  // For mobile pop-out: replacing the button for the mobile side
-  {
-    title: 'Sign up',
-    url: '#',
-  },
 ];
+
+export const NavbarContext = createContext();
 
 function App() {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
     <div id='container'>
-      <header>
-        <Navbar 
-          isClicked={isClicked} 
-          setIsClicked={setIsClicked} 
-        />
-      </header>
+      <NavbarContext.Provider value={{ menuItems, isClicked, setIsClicked }}>
+        <header>
+          <Navbar />
+        </header>
+      </NavbarContext.Provider>
     </div>
   );
 }

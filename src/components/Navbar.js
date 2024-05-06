@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { NavbarContext } from '../App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import reactIcon from '../assets/logo-react.svg';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import Button from './Buttons';
 
-function Navbar({ isClicked, setIsClicked }) {
+function Navbar() {
+  const { menuItems, isClicked, setIsClicked } = useContext(NavbarContext);
 
   const handleIconClick = () => {
-    setIsClicked((prevBoolean) => !prevBoolean)
-  }
+    setIsClicked((prevBoolean) => !prevBoolean);
+  };
 
   return (
     <nav className='bg-react-navbar text-white'>
@@ -43,6 +46,16 @@ function Navbar({ isClicked, setIsClicked }) {
           </div>
         </div>
       </div>
+      <ul className={` ${isClicked ? 'flex flex-col items-center justify-center  bg-indigo-600' : 'hidden'}`}>
+        {menuItems.map((item, index) => {
+          return (
+            <li key={index} className='my-3'>
+              <a key={index} href={item.url}>{item.title}</a>
+            </li>
+          );
+        })}
+        <Button />
+      </ul>
     </nav>
   );
 }

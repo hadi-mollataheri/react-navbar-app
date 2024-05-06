@@ -46,7 +46,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <ul className={` ${isClicked ? 'flex flex-col items-center justify-center  bg-indigo-600' : 'hidden'}`}>
+      <ul className={` ${isClicked ? 'flex flex-col items-center justify-center bg-indigo-600' : 'hidden'}`}>
         {menuItems.map((item, index) => {
           return (
             <li key={index} className='my-3'>

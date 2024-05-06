@@ -2,7 +2,7 @@ import React from 'react';
 
 function Button() {
   return (
-    <button className=' bg-cyan-400 rounded-md py-1 px-3 leading-tight my-4 align-middle'>
+    <button className=' bg-cyan-500 rounded-md pb-1 px-3 my-4 h-8 leading-none'>
       sign up
     </button>
   );

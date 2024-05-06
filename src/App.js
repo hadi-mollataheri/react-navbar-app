@@ -25,13 +25,16 @@ export const menuItems = [
   },
 ];
 
-
 function App() {
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
     <div id='container'>
       <header>
-        <Navbar />
+        <Navbar 
+          isClicked={isClicked} 
+          setIsClicked={setIsClicked} 
+        />
       </header>
     </div>
   );

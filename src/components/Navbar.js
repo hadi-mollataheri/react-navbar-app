@@ -19,7 +19,6 @@ function Navbar() {
         id='navbar-container'
         className='flex justify-between items-center py-5 px-10 relative h-20'
       >
-
         <div
           id='logo-container'
           className='font-bold flex justify-center items-center'
@@ -47,16 +46,20 @@ function Navbar() {
         </div>
 
         <ul
-          className={` ${
+          className={`${
             isClicked
-              ? 'flex flex-col items-center justify-center bg-indigo-600 absolute top-20 left-0 w-full'
-              : 'hidden'
-          } md:flex md:justify-center md:items-center md:gap-8 md:static`}
+              ? 'bg-indigo-600 absolute left-0 top-20 flex flex-col justify-center items-center w-full transition-all'
+              : 'flex flex-col w-full absolute top-20 -left-full transition-all z-10'
+          } md:flex md:bg-inherit md:flex-row md:w-auto md:max-w-fit md:justify-center md:items-center md:gap-8 md:static`}
         >
           {menuItems.map((item, index) => {
             return (
               <li key={index} className='my-3 md:my-0'>
-                <a key={index} href={item.url}>
+                <a
+                  key={index}
+                  href={item.url}
+                  className='hover:text-indigo-600 hover:bg-white rounded p-0.5 pb-1 align-middle hover:transition'
+                >
                   {item.title}
                 </a>
               </li>
@@ -64,7 +67,6 @@ function Navbar() {
           })}
           <Button />
         </ul>
-
       </div>
     </nav>
   );

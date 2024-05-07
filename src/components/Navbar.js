@@ -46,11 +46,11 @@ function Navbar() {
         </div>
 
         <ul
-          className={`${
+          className={`absolute top-20 flex flex-col justify-center items-center transition-all ${
             isClicked
-              ? 'bg-indigo-600 absolute left-0 top-20 flex flex-col justify-center items-center w-full transition-all'
-              : 'flex flex-col w-full absolute top-20 -left-full transition-all z-10'
-          } md:flex md:bg-inherit md:flex-row md:w-auto md:max-w-fit md:justify-center md:items-center md:gap-8 md:static`}
+              ? 'bg-indigo-600 left-0 w-full'
+              : 'w-full -left-full '
+          } md:flex md:bg-inherit md:flex-row md:w-auto md:max-w-fit md:gap-8 md:static`}
         >
           {menuItems.map((item, index) => {
             return (

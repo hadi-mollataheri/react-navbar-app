@@ -2,8 +2,6 @@
 
 This is an *Responsive Navigation Bar* app that I built with **React.js**.
 
-**Notice:** The delay is for the first time loading and because of the hight quality images
-
 **Topics:** State and Context hooks ,TailwindCSS, CSS, Responsive
 
 I embarked on this project as a series of practice exercises after dedicating a couple of years to learning front-end web development. My goal was twofold: to enhance my coding skills and bolster my resume, ultimately preparing myself for the job market.
